@@ -1,0 +1,43 @@
+﻿@page
+@model App1.Pages.LoginModel
+@{
+}
+<style>
+    .lpg{
+        background-color: antiquewhite;
+        border-radius: 12px;
+        height:300px;
+        width: 300px;
+        padding:200px;
+    }
+    .lpg{
+        display:flex;
+        justify-content:center;
+        align-items:center;
+    }
+</style>
+
+<body>
+    <div class="lpg">
+        <form class="logpage" id="signup-form" action="" method="POST">
+            <h2>Login</h2>
+            <br />
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <br />
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <br />
+            <div>  <button type="submit" asp-page="/Index">Login</button></div>
+
+        </form>
+    </div>
+</body>
+
+
+
+ 

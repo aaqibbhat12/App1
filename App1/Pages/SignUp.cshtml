@@ -1,0 +1,68 @@
+﻿@page
+@model App1.Pages.SignUpModel
+@{
+}
+<style>
+    .lpg {
+       background-color:antiquewhite;
+       border-radius:12px;
+       height:500px;
+       width:350px;
+    }
+    .lpg{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-left:250px;
+    }
+    .div{
+        height:50px;
+        width:250px;
+        gap:5px;
+    }
+</style>
+    
+<body>
+    <div class="lpg">
+        <form id="signup-form" action="" method="POST">
+            <h2>Sign Up</h2> <br />
+            <div class="form-group">
+                <label for="username"> 
+                    First Name     </label> 
+                <input type="text" id="First Name" name="First Name" required methood value="@Model.userInfo.FirstName">
+            </div>
+            <br />
+            <div class="form-group">
+                <label for="username"> 
+                    Last Name    </label>
+                <input type="text" id="Last Name" name="Last Name" required value="@Model.userInfo.LastName">
+            </div>
+            <br />
+            <div class="form-group">
+                <label for="email">  
+                  Email     </label>
+                <input type="email" id="email" name="email" required value="@Model.userInfo.Email">
+            </div>
+            <br />
+            <div class="form-group">
+                <label for="password"> 
+                  Password</label>
+                <input type="password" id="password" name="password" required value="@Model.userInfo.Password">
+            </div>
+            <br />
+            <div class="form-group">
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+                <br />
+                <button type="submit" asp-page="/login">Sign Up</button>
+                <div1>
+                    <p>If already have an account login</p>
+                    <button type="submit" asp-page="/login">Login</button>
+                </div1>
+                
+            </div>
+        </form>
+     
+    </div>
+ 
+</body>
